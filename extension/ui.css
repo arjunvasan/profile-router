@@ -1,0 +1,66 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --hover: #f3f4f6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --fg: #f2f2f2;
+    --muted: #9ca3af;
+    --line: #38383a;
+    --accent: #60a5fa;
+    --hover: #2c2c2e;
+  }
+}
+body {
+  margin: 0;
+  padding: 18px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 -apple-system, system-ui, sans-serif;
+}
+h1 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.choices {
+  display: grid;
+  gap: 6px;
+}
+button.choice {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+button.choice:hover,
+button.choice:focus-visible {
+  background: var(--hover);
+  border-color: var(--accent);
+  outline: none;
+}
+button.choice small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.ok {
+  color: var(--accent);
+}

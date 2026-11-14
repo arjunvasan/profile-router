@@ -1,0 +1,9 @@
+#!/bin/sh
+# Runs the helper's command line, building the app first when needed.
+set -e
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+APP="$ROOT/build/ProfileRouter.app"
+if [ ! -x "$APP/Contents/MacOS/ProfileRouter" ] || [ "$1" = "setup" ]; then
+  "$ROOT/scripts/build-app.sh" >&2
+fi
+exec "$APP/Contents/MacOS/ProfileRouter" "$@"

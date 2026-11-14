@@ -1,0 +1,51 @@
+[
+  {
+    "id": "google",
+    "name": "Google",
+    "own": ["google.com", "youtube.com"],
+    "matches": [
+      { "host": "accounts.google.com", "path": "^/(o/oauth2/|signin/oauth|gsi/select)" }
+    ]
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "own": ["github.com"],
+    "matches": [
+      { "host": "github.com", "path": "^/login/(oauth/authorize|device)" }
+    ]
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "own": ["microsoftonline.com", "live.com", "microsoft.com", "office.com"],
+    "matches": [
+      { "host": "login.microsoftonline.com", "path": "^/[^/]+/oauth2/(v2\\.0/)?(authorize|devicecode)" },
+      { "host": "login.live.com", "path": "^/oauth20_authorize\\.srf" }
+    ]
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "own": ["apple.com", "icloud.com"],
+    "matches": [
+      { "host": "appleid.apple.com", "path": "^/auth/authorize" }
+    ]
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "own": ["gitlab.com"],
+    "matches": [
+      { "host": "gitlab.com", "path": "^/oauth/authorize" }
+    ]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "own": ["slack.com"],
+    "matches": [
+      { "host": "slack.com", "path": "^/(oauth/(v2/)?authorize|openid/connect/authorize)" }
+    ]
+  }
+]

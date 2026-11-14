@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Profile Router",
+  "version": "0.1.0",
+  "description": "Sends each sign-in to the Chrome profile that holds the right account.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlYKcFuA4oklKvIc+XDcmKRkIyV/BOFahEydmJHHn14A42mUyJpRhMZRRU/GMZz5AUyrPD71NrYCjz1R5LfBONaau2kRGIwTfWphYKAFtDuKd4kBcWZRq1YH3alx315hSrk4qY8F/oM9vMnFoLROa5QissyISaxVofnIqR+ias54Q6YDBhz7G23WseIfro7b/6ILO1NKMyfQrNxAhCv34GhTEaFuhMwiAJ3rTHA+2XYh+WcKiMJQxJLopUa4krcECU+3lKrTtUOUt7iJnRHUrHja8kKCHlzkOY80E7S7CN9aeGHOG4daBZhzrQS8/3kHiOe18Nue32a1lMWR3Ti0fhQIDAQAB",
+  "minimum_chrome_version": "120",
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["nativeMessaging", "webRequest", "webNavigation", "tabs", "notifications", "storage", "cookies"],
+  "host_permissions": [
+    "https://accounts.google.com/*",
+    "https://github.com/*",
+    "https://login.microsoftonline.com/*",
+    "https://login.live.com/*",
+    "https://appleid.apple.com/*",
+    "https://gitlab.com/*",
+    "https://slack.com/*"
+  ],
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+  "action": { "default_title": "Profile Router", "default_popup": "popup.html" }
+}
